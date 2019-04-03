@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 300px;
+}
+title {
+  display: none;
+}
+#page {
+  min-width: 300px;
+  font-family: 'Nixie One', cursive;
+background: url("https://drive.google.com/uc?id=1XHTNPeT1wlRTJ5TLLgYpYfg6JYJdXIuG") no-repeat center center/cover fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header h1 {
+  display: none;
+}
+
+section {
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  transform: translateY(10%);
+
+}
+#header > a {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+
+
+@keyframes bounce{
+     from {transform: translateY(0%);}
+     25%  {transform: translateY(-10%);}
+     50%  {transform: translateY(0%);}
+     to   {transform: translateY(10%);}
+}
+
+#logo:hover {
+  animation: bounce 1.3s ease-in-out infinite;
+}
+
+/* ------------------------------------ nav ------ */
+
+
+nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  display: block;
+  padding-left: 1em;
+  padding-top: 1em;
+  transition: height 2s, width 0.3s;
+
+}
+/* -------------toggle menu ----------------*/
+nav .toggle {
+  height: 4px;
+  background: black;
+  margin-bottom: 3px;
+  border-radius: 25px;
+  transition: 0.7s;
+}
+.one {
+  width: 30px;
+}
+.two {
+  width: 20px;
+}
+.three {
+  width: 25px;
+  margin-bottom: 0 !important;
+}
+
+/* ------navigation -------------*/
+
+.menu a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+.menu {
+  padding-top: 50px;
+  opacity:0;
+  transition:opacity 0.7s jump-end 0.7s;
+}
+nav:hover {
+  background: rgba(0,0,0,0.8);
+}
+nav:hover .menu {
+  opacity: 1;
+}
+nav:hover .toggle {
+  width: 30px;
+  background-color: white;
+}
+nav:hover {
+  height: 100%;
+  width: 150px;
+}
+
+/* ------- #about1 ------ */
+
+#about1 {
+  height: 100vh;
+  position: relative;
+}
+#about1 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 80%;
+  font-size: 1.5em;
+   -webkit-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+}
+#scroll1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*----------------------about2:jobs --------*/
+#about2 {
+  height: 61vh;
+  padding-top: 35vh;
+  padding-bottom: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#jobpicture, #jobtext, #arrow {
+flex: 1 0 100px;
+width: 100%;
+position: relative;
+}
+
+#jobpicture .pic {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  bottom:0;
+  left:0;
+  padding-bottom: 10px;
+}
+#jobtext p {
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 80%;
+  transform: translateY(-50%);
+  padding: 10px;
+  margin-left: 10%;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  -webkit-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+}
+
+#arrow img {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#arrow {
+  opacity: 0.5;
+}
+
+
+/* ---- KEYFRAMES ---*/
+
+/* pictures */
+
+@keyframes appear {
+  0% {left: 20%; opacity: 0;}
+  50% {left: 50%; opacity: 1;}
+  100% {left: 80%; opacity: 0;}
+}
+
+@-webkit-keyframes appear {
+0% {left: 20%; opacity: 0;}
+50% {left: 50%; opacity: 1;}
+100% {left: 80%; opacity: 0;}
+}
+
+/* text */
+
+@keyframes textappear {
+  40% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes textappear {
+  40% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+/* arrow */
+
+@keyframes appear2 {
+  0% {opacity: 0.4;}
+  100% {opacity: 1;}
+  }
+@-webkit-keyframes appear2 {
+  0% {opacity: 0.4;}
+  100% {opacity: 1;}
+  }
+
+/* ---applied animations ---*/
+
+/* pictures */
+
+.camel.in-view {
+  animation: appear 5s linear 0s;
+  -webkit-animation: appear 5s linear 0s;
+}
+.bike.in-view {
+  animation: appear 5s linear 6s;
+  -webkit-animation: appear 5s linear 6s;
+}
+.fair.in-view {
+  animation: appear 5s linear 11s;
+  -webkit-animation: appear 5s linear 11s;
+}
+.cow.in-view {
+  animation: appear 5s linear 17s;
+  -webkit-animation: appear 5s linear 17s;
+}
+.diver.in-view {
+  animation: appear 5s linear 23s;
+  -webkit-animation: appear 5s linear 23s;
+}
+
+/* text */
+
+.camelt.in-view {
+   animation: textappear 5s linear 3s;
+-webkit-animation: textappear 5s linear 0s;
+
+}
+.biket.in-view {
+  animation: textappear 5s linear 6s;
+-webkit-animation: textappear 5s linear 6s;
+}
+.fairt.in-view {
+   animation: textappear 5s linear 11s;
+-webkit-animation: textappear 5s linear 11s;
+}
+.cowt.in-view {
+  animation: textappear 5s linear 17s;
+-webkit-animation: textappear 5s linear 17s;
+}
+.divert.in-view {
+  animation: textappear 5s linear 23s;
+-webkit-animation: textappear 5s linear 23s;
+}
+.webt.in-view {
+ animation: appear2 5s linear 28s forwards;
+-webkit-animation: appear2 5s linear 28s forwards;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+/* arrow */
+
+#arrow.in-view, #arrow {
+  animation: appear2 2s linear 30s forwards;
+}
+
+
+/*----------------Portfolio---------------------------portfolio -----*/
+
+.gallerie a {
+
+  -webkit-box-shadow: -22px 16px 28px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: -22px 16px 28px -3px rgba(0,0,0,0.75);
+box-shadow: -22px 16px 28px -3px rgba(0,0,0,0.75);
+  border: 1px solid grey;
+}
+
+.gallerie a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+#portfolio {
+  position: relative;
+  padding-top: 10px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallerie {
+   display: grid;
+   padding-top: 25px;
+   width: 90%;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) ;
+    grid-auto-rows: 130px;
+}
+
+#portfolio h1
+{
+  background: rgba(255,255,255,0.8);
+  border-radius: 10px;
+
+ text-align: center;
+  width: 50%;
+  padding-top: 5px;
+margin-top: 1%;
+    padding-bottom: 5px;
+ -webkit-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+}
+
+#fleche {
+position: absolute;
+bottom: 1%;
+left: 50%;
+transform: translateX(-50%);
+}
+
+
+
+
+
+/* -------contact --------*/
+#contact {
+  display: flex;
+  padding-top: 2%;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+#contact div {
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255,255,255,0.8);
+   transform: translate (-50%,-50%);
+ -webkit-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+}
+#contact h2 {
+  background: rgba(255,255,255,0.8);
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  transform: translate (-50%,-50%);
+ -webkit-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+}
+
+#contact img {
+  width: 150px;
+
+}
+
+#freecode {
+  height: 130px;
+  padding-right: 5px;
+  padding-top: 10px;
+}
+
+/* ---------------------------Media queries ------------------------Media queries -----*/
+@media screen and (max-width: 800px) and (min-height: 450px) {
+  #header>a {
+    width: 50%;
+ }
+}
+@media screen and (min-width: 900px) {
+  #about1 p, #about2 p {
+    width: 60%;
+
+    font-size: 2em;
+  }
+  #about2 p {
+    margin-left: 25%;
+    padding: 20px;
+  }
+#about2 {
+  height: 80vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+#portfolio {
+  width: 70%;
+  margin-left: 15%;
+  justify-content: center;
+}
+
+#portfolio h1 {
+  font-size: 2em;
+}
+
+.gallerie {
+  grid-auto-rows: 150px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+ .pic {
+    transform: scale(2);
+  }
+  #jobpicture img {
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+
+.gallerie {
+  grid-auto-rows: 230px;
+}
+}
