@@ -32,9 +32,18 @@ section {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   min-height: 100vh;
 }
@@ -43,27 +52,41 @@ header {
   display: block;
   margin: 0 auto 0 auto;
   width: 100%;
+  -webkit-transform: translateY(10%);
+  -ms-transform: translateY(10%);
   transform: translateY(10%);
 
 }
 #header > a {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 20%;
 }
 
-
-
+@-webkit-keyframes bounce{
+     from {-webkit-transform: translateY(0%);transform: translateY(0%);}
+     25%  {-webkit-transform: translateY(-10%);transform: translateY(-10%);}
+     50%  {-webkit-transform: translateY(0%);transform: translateY(0%);}
+     to   {-webkit-transform: translateY(10%);transform: translateY(10%);}
+}
 @keyframes bounce{
-     from {transform: translateY(0%);}
-     25%  {transform: translateY(-10%);}
-     50%  {transform: translateY(0%);}
-     to   {transform: translateY(10%);}
+     from {-webkit-transform: translateY(0%);transform: translateY(0%);}
+     25%  {-webkit-transform: translateY(-10%);transform: translateY(-10%);}
+     50%  {-webkit-transform: translateY(0%);transform: translateY(0%);}
+     to   {-webkit-transform: translateY(10%);transform: translateY(10%);}
 }
 
 #logo:hover {
-  animation: bounce 1.3s ease-in-out infinite;
+  -webkit-animation: bounce 1.3s ease-in-out infinite;
+          animation: bounce 1.3s ease-in-out infinite;
 }
 
 /* ------------------------------------ nav ------ */
