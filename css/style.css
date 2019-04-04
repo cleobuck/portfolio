@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
 body {
   min-width: 300px;
 }
@@ -339,7 +343,6 @@ padding-right: 5px;
 .gallerie a {
 
   -webkit-box-shadow: -22px 16px 28px -3px rgba(0,0,0,0.75);
--moz-box-shadow: -22px 16px 28px -3px rgba(0,0,0,0.75);
 box-shadow: -22px 16px 28px -3px rgba(0,0,0,0.75);
   border: 1px solid grey;
 }
@@ -347,46 +350,58 @@ box-shadow: -22px 16px 28px -3px rgba(0,0,0,0.75);
 .gallerie a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 
 }
 #portfolio {
-  position: relative;
+ position: relative;
   padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
 }
+
 .gallerie {
+   display: -ms-grid;
    display: grid;
    padding-top: 25px;
    width: 90%;
     grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-auto-rows: 130px;
 }
 
 #portfolio h1
-{
+{  
   background: rgba(255,255,255,0.8);
   border-radius: 10px;
-
- text-align: center;
+  text-align: center;
   width: 50%;
   padding-top: 5px;
-margin-top: 1%;
-    padding-bottom: 5px;
- -webkit-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
--moz-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+  margin-top: 1%;
+  padding-bottom: 5px;
+  -webkit-box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
+  box-shadow: -22px 23px 13px -15px rgba(0,0,0,0.75);
 }
 
 #fleche {
 position: absolute;
 bottom: 1%;
 left: 50%;
+-webkit-transform: translateX(-50%);
+-ms-transform: translateX(-50%);
 transform: translateX(-50%);
 }
 
