@@ -22,4 +22,4 @@ Et un aperçu visuel:
 
 
 
-Je compte refaire un site personnel au fil de ma formation, plus professionnel. Je garde celui-ci comme attestation de mon évolution.
+Je compte refaire un portfolio au fil de ma formation, plus professionnel. Je garde celui-ci comme attestation de mon évolution.
