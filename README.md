@@ -2,7 +2,7 @@
 
 
 
-Une page personnelle créée afin de participer aux inscriptions et au tests d&#39;entrée réussis chez Becode.
+Une page personnelle créée afin de participer aux inscriptions et aux tests d&#39;entrée réussis chez Becode.
 
 Voici le lien vers la Github page:
 
