@@ -10,7 +10,7 @@ Voici le lien vers la Github page:
 
 Et un aperçu visuel:
 
-
+![portfolio-screenshot](portfolio.png "portfolio screenshot")
 
 
 
